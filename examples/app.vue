@@ -9,12 +9,12 @@ nav {
     li { display: inline-block; }
     li + li { border-left: solid 1px #bbb; padding-left: 10px; margin-left: 10px; }
 }
-.container{ padding: 10px 40px 0; }
+.container{ padding: 0; }
 .v-link-active { color: #bbb; }
 </style>
 <template>
     <div class="container">
-        <nav>
+        <!-- <nav>
             <ul>
                 <li><router-link to="/layout">Layout</router-link></li>
                 <li><router-link to="/affix">Affix</router-link></li>
@@ -63,7 +63,7 @@ nav {
                 <li><router-link to="/auto-complete">AutoComplete</router-link></li>
                 <li><router-link to="/scroll">Scroll</router-link></li>
             </ul>
-        </nav>
+        </nav> -->
         <router-view></router-view>
     </div>
 </template>

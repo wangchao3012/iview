@@ -253,6 +253,10 @@
                 if (this.height) {
                     const height = parseInt(this.height);
                     style.height = `${height}px`;
+                    // style.height = '100%';
+
+              
+                    // debugger
                 }
                 if (this.width) style.width = `${this.width}px`;
                 return style;
@@ -904,7 +908,14 @@
         },
         mounted () {
             this.handleResize();
-            this.$nextTick(() => this.ready = true);
+            this.$nextTick(() =>{
+                
+                this.ready = true;
+                let a =    document.querySelector('.ivu-table-wrapper');
+              this.height=  a.parentNode.clientHeight
+                // debugger
+            } 
+            );
 
             on(window, 'resize', this.handleResize);
             this.observer = elementResizeDetectorMaker();
